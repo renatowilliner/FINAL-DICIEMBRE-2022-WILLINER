@@ -146,11 +146,16 @@ namespace WILLINER
  * 
  * 
  * 5) La  sobrecarga de metodos se utiliza cuando queremos realizar un mismo metodo y tenemos parametros distintos , 
- * lo mismo pasa cuando queremos insanciar una clase que tiene mas o menos propiedades
+ * lo mismo pasa cuando queremos insanciar una clase que tiene mas o menos propiedades, Una sobreeescritura se trata de metodos de comparten algunas
+ * cosas similiares pero su resultado es distinto ya que siempre habra que realizar algo mas propia de esa clase 
  * 
  * public int Suma (int numero1 , int numero2)
  * {
  *      return int suma = numero1+ numero2
+ * }
+ * public int Suma (long numero2, long numero1)
+ * {
+ *      return long suma= numero2+numero1
  * }
  
  */
