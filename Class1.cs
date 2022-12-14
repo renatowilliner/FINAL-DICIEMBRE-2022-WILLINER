@@ -17,12 +17,10 @@ namespace WILLINER
         public enum LiquidoCocina { Aceite = 1, Salsa = 2, Vinagre = 3; }
         public enum Sabores { Salado = 1, Dulce = 1, Agridulce = 3 }
         public enum Paises { Argetnina = 1, Grecia = 2, Hungria = 3, Indonesia = 4, Mexico = 5, Rusia = 6, Espania = 7, Urugay = 8, Vietnnam = 9 }
-
         public enum RecetasVariedad { Cocina = 1, Postres = 2, Cocteles = 3 }
 
         List<Receta> Recetas = new List<Receta>();
         List<Usuario> Usuarioss = new List<Usuario>();
-
         public List<string> RecetaParticular(Receta receta)
         {
             List<string> Datos = new List<string>();
@@ -59,7 +57,6 @@ namespace WILLINER
             }
             return Datos;
         }
-
         public void CargarUsuario(string contrasenia, int tipo, string nickname, int codigoreceta, string nickfav, string xx)
         {
             var random = new Random();
@@ -85,10 +82,7 @@ namespace WILLINER
 
             }
 
-
-
         }
-
         public void AgregarUsuarioFavorito(string nickfav)
         {
             int indice = Usuarioss.FindIndex(x => x.ObtenerNickName() == nickfav);
@@ -106,7 +100,6 @@ namespace WILLINER
                 }
 
             }
-
         }
         public bool Validacion(string nickname, string contrasenia)
         {
@@ -117,7 +110,6 @@ namespace WILLINER
 
             }
             else return true;
-
 
         }
     }
