@@ -8,6 +8,7 @@ namespace WILLINER
 {
     public class LiquidoCocina:Liquido
     {
+        //CORRECCIÓN: SE DEFINIÓ EL ENUM PERO NOS E USÓ
         int Tipo { get; set; }
     }
 }

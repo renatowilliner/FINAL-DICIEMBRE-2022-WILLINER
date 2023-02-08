@@ -12,6 +12,7 @@ namespace WILLINER
 {
     public class Class1
     {
+        //CORRECCIONES: LOS ENUM VAN EN ARCHIVOS SEPARADOS Y APARTE.
         public enum Usuarios { Vip = 1, Comun = 2 }
         public enum Bebida { Vino = 1, Gin = 2, Wiskey = 3 }
         public enum LiquidoCocina { Aceite = 1, Salsa = 2, Vinagre = 3; }
@@ -37,6 +38,7 @@ namespace WILLINER
                 {
                     if (i < 3)
                     {
+                        //CORRECCIÓN: SIN SOBREESCRIBIR EL METODO TOSTRING ESTO NO FUNCIONA (IMPRIME CUALQUIER COSA)
                         Datos.Add(IngredientesReceta[i].ToString());
                     }
                     else
@@ -60,6 +62,7 @@ namespace WILLINER
             return Datos;
         }
 
+//CORRECCIÓN: NO SE REALIZÓ SOBRECARGA DE MÉTODOS
         public void CargarUsuario(string contrasenia, int tipo, string nickname, int codigoreceta, string nickfav, string xx)
         {
             var random = new Random();
@@ -77,6 +80,8 @@ namespace WILLINER
             }
 
         }
+
+        //CORRECCIÓN: NO SE REALIZÓ SOBRECARGA DE MÉTODOS
         public void AgregarRecetaFav(string nick, string contrasenia, int codigo)
         {
             if (Validacion(nick, contrasenia) == true)
@@ -89,6 +94,7 @@ namespace WILLINER
 
         }
 
+//CORRECCIÓN: NO SE REALIZÓ SOBRECARGA DE MÉTODOS
         public void AgregarUsuarioFavorito(string nickfav)
         {
             int indice = Usuarioss.FindIndex(x => x.ObtenerNickName() == nickfav);
@@ -102,6 +108,7 @@ namespace WILLINER
                 Help = Recetas.FindAll(x => x.ObtenerIngredientes().ToString() == texto.ToLower() || x.ObtenerNombre() == texto.ToLower()).ToList();
                 if (usuario.ObtenerTipo() == (int)Usuarios.Vip)
                 {
+                //CORRECCIÓN: LA SEGUNDA PARTE DE LA CODICIÓN NO FUNCIONA.
                     Help.OrderBy(x => x.ObtenerCodigo().ToString() == usuario.ObtenerRecetasFavs().ToString());
                 }
 
@@ -133,6 +140,9 @@ namespace WILLINER
  * 
  * 
  * El D jamas se ejecutara porque es hasta que i sea 0 o = y ya lo es 
+
+            CORRECCIÓN: EL B TAMBIÉN ESTA MAL.
+
  * 
  * 2) Las expresiones lambda sirven para devolver elementos a partir de una condicion, ademas de que ahorran mucho codigo 
  * List<int> Enteros {1,4,6,7,9,10,12,20,40}
@@ -140,14 +150,18 @@ namespace WILLINER
  * List<int>mayores = Entetos.FinAll(x=>x>8)
  * 
  * 3) Es un componente integral de Windows que admite la creación y ejecución de aplicaciones
+
+            INCOMPLETO
  * 
  * 
  * 4) Se entiende como divir a nuestro problemas en pequeñas soluciones para realizar nuestro programa de una forma mas facil y ordenada
  * 
+            INCOMPLETO
  * 
  * 5) La  sobrecarga de metodos se utiliza cuando queremos realizar un mismo metodo y tenemos parametros distintos , 
  * lo mismo pasa cuando queremos insanciar una clase que tiene mas o menos propiedades
  * 
+            CORRECCIÓN: COMO SI HUBIERA SIDO DE UN ENUNCIADO QUE NO SE PIDIÓ EN ESTE FINAL, INCORRECTO
  * public int Suma (int numero1 , int numero2)
  * {
  *      return int suma = numero1+ numero2

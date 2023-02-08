@@ -7,6 +7,7 @@ using System.Web;
 
 namespace WILLINER
 {
+    //CORRECCIÓN: NO SE RESOLVIÓ CON HERENCIA PARA DIFERENCIAR COMUNES Y VIP.
     public class Usuario
     {
         private int Codigo { get; set; }
